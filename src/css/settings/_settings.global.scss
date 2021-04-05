@@ -1,0 +1,191 @@
+/**
+* CONTENTS
+*
+* The global settings file contains any project-wide variables; things that
+* need to be made available to the entire codebase.
+*
+* Colors................................
+* Container.............................
+* Typography............................
+* Mediaqueries..........................
+* Spacing...............................
+* z-index...............................
+* borders...............................
+* animation.............................
+
+///* ========================================================================
+//   #COLORS
+//   ==========================font-weight============================================== */
+
+$black: #2D2134;
+$white: #FFFFFF;
+$gray: #978F99;
+$gray-light: #FBFBFC;
+
+$brand-primary: #152354;
+$brand-secondary: #458DBF;
+$brand-secondary-lighter: #E6F0F6;
+$brand-tertiary: #FBD828;
+
+///* ========================================================================
+//   #CONTAINER
+//   ======================================================================== */
+
+$inuit-wrapper-width: 1200px;
+
+
+///* ========================================================================
+//   #TYPOGRAPHY
+// ======================================================================== */
+ 
+ $font-weight-regular: 400;
+ $font-weight-medium: 600;
+ $font-weight-bold: 700;
+ $font-weight-black: 900;
+ 
+ $font-family-global: 'Source Sans Pro', sans-serif;
+ $font-family-heading: 'Source Sans Pro', sans-serif;
+ 
+ $h1-font-sizes: (
+   null: (32px, 1.22),
+   tablet: (42px, 1.04),
+ );
+ 
+ $h2-font-sizes: (
+   null: (26px, 1.22),
+   tablet: (34px, 1.08),
+ );
+ 
+ $h3-font-sizes: (
+   null: 22px,
+   tablet: 28px,
+ );
+ 
+$inuit-line-height-h3: 1.22;
+$inuit-line-height-h4: 1.22;
+$inuit-line-height-h5: $inuit-global-line-height;
+$inuit-line-height-h6: $inuit-global-line-height;
+ 
+///* ========================================================================
+//   #MEDIAQUERIES
+// ======================================================================== */
+ 
+// mediaquery breakpoint based on this setup:
+// @include mq($from: desktop) {
+// }
+
+$mq-breakpoints: (
+   mobile: 480px,
+   tablet: 768px,
+   desktop: 1024px,
+   wide: 1440px
+);
+ 
+///* ========================================================================
+//   #SPACING
+// ======================================================================== */
+ 
+$inuit-global-spacing-unit-tiny: 10px;
+$inuit-global-spacing-unit-small: 20px;
+$inuit-global-spacing-unit: 50px;
+$inuit-global-spacing-unit-large: 70px;
+$inuit-global-spacing-unit-huge: 90px;
+$inuit-global-spacing-unit-superhuge: 100px;
+ 
+$spacing-tiny: $inuit-global-spacing-unit-tiny;
+$spacing-small: $inuit-global-spacing-unit-small;
+$spacing: $inuit-global-spacing-unit;
+$spacing-large: $inuit-global-spacing-unit-large;
+$spacing-huge: $inuit-global-spacing-unit-huge;
+ 
+$gutter-tiny: $inuit-global-spacing-unit-tiny;
+$gutter-small: $inuit-global-spacing-unit-small;
+$gutter: $inuit-global-spacing-unit;
+$gutter-large: $inuit-global-spacing-unit-large;
+$gutter-huge: $inuit-global-spacing-unit-huge;
+ 
+ 
+/*
+* Responsive object & utility classes
+*/
+ 
+$responsive-spacing-classes: false;
+$responsive-align-classes: false;
+ 
+ /**
+  * Spacing utility classes
+  */
+ 
+$inuit-spacing-directions: (
+   null: null,
+   "-top": "-top",
+   "-right": "-right",
+   "-bottom": "-bottom",
+   "-left": "-left",
+   "-horizontal": "-left" "-right",
+   "-vertical": "-top" "-bottom",
+);
+ 
+$inuit-spacing-properties: (
+   "padding": "padding",
+   "margin": "margin",
+);
+ 
+ $inuit-spacing-sizes: (
+   null: $inuit-global-spacing-unit,
+   "-tiny": $inuit-global-spacing-unit-tiny,
+   "-small": $inuit-global-spacing-unit-small,
+   "-large": $inuit-global-spacing-unit-large,
+   "-huge": $inuit-global-spacing-unit-huge,
+   "-none": 0
+ );
+ 
+///* ========================================================================
+//   #Z-INDEX
+// ======================================================================== */
+ 
+ $zindex-navbar: 900 !default;
+ $zindex-dropdown: 1000 !default;
+ $zindex-sticky: 1020 !default;
+ $zindex-fixed: 1030 !default;
+ $zindex-modal-backdrop: 1040 !default;
+ $zindex-modal: 1050 !default;
+ $zindex-popover: 1060 !default;
+ $zindex-tooltip: 1070 !default;
+ 
+//  $inuit-ratios: (
+//      (1:1),
+//      (2:1)
+//  );
+ 
+///* ========================================================================
+//   #BORDERS
+// ======================================================================== */
+
+$global-radius: 0px; 
+
+$global-border-radius-small: 0px;
+$global-border-radius: 0px;
+$global-border-radius-big: 2px;
+$global-opacity: 0.75;
+ 
+///* ========================================================================
+//   #ANIMATION
+// ======================================================================== */
+ 
+//   Standardise some UI treatments.
+
+$global-transition: all 300ms ease-in-out !default;
+ 
+$time-small: 0.220s;
+$time: 0.440s;
+$time-fast: 0.2s;
+$time-large: 0.660s;
+$time-xlarge: 0.880s;
+  
+$ease-quad-out: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$ease-quad-out: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$ease-out: cubic-bezier(0.77, 0, 0.175, 1);
+$global-transition: $time $ease-quad-out;
+ 
+$global-transition-fast:  $time-fast $ease-quad-out;

@@ -1,0 +1,17 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% extends "_layouts/_layout.twig" %}
+
+{% block content %}
+    
+    <section>
+        <div style="text-align:center; margin-top:40px;">
+            <img src="/offline.svg" width="80" height="80" />
+            <p>Boo! You don't have an internet connection.</p>
+            <p>Please check your network connection and try again.</p>
+        <div>
+    </section>
+
+{% endblock %}
+
+{% block _inline_js %}
+{% endblock %}

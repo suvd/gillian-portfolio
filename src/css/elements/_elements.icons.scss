@@ -1,0 +1,47 @@
+
+/*========================================================================== */
+/* CLOSEBUTTON
+/*========================================================================== */
+
+
+// <div class="close-button-container">
+// <div class="close-button"> 
+//     <span class="line"></span>
+//     <span class="line"></span>
+// </div>
+// </div>
+
+.close-button-container {
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: $global-transition;
+}
+
+.close-button-container:hover {
+    transform: scale(1.1);
+    transition: $global-transition;
+}
+
+.close-button{
+    padding-top: 10px;
+}
+
+.close-button .line{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $white;
+}
+
+.close-button .line:first-child {
+    transform: rotate(45deg);
+    margin-top: 2px;
+}
+.close-button .line:last-child {
+    transform: rotate(-45deg);
+    margin-top: -3px;
+}

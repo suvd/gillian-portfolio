@@ -1,0 +1,103 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+
+// We have all of our heading font sizes defined here. Passing these pixel
+// values into our `inuit-font-size()` mixin will generate a rem-based
+// `font-size` with a pixel fallback, as well as generating a `line-height` that
+// will sit on our baseline grid.
+
+$inuit-font-size-h1:  60px !default;
+$inuit-font-size-h2:  25px !default;
+$inuit-font-size-h3:  18px !default;
+$inuit-font-size-h4:  16px !default;
+$inuit-font-size-h5:  18px !default;
+$inuit-font-size-h6:  16px !default;
+
+$inuit-font-size-body:  16px !default;
+$inuit-font-size-body-big:  18px !default;
+
+
+
+::selection {
+  background: $brand-primary;
+  color: $white;
+}
+
+//
+// COPY
+//
+
+main{
+  color: $brand-primary;
+}
+
+p{
+  font-size: $inuit-font-size-body;
+  line-height: 180%;
+  margin-bottom: $inuit-global-spacing-unit-small;
+  font-weight: $font-weight-regular;
+
+  strong{
+    font-weight:  $font-weight-bold;
+  }
+}
+
+
+//
+// HEADERS
+//
+
+h1, h2, h3, h4{
+  line-height: 120%;
+  margin-bottom: $inuit-global-spacing-unit;
+  font-family: $font-family-heading;
+  color: $brand-primary;
+}
+
+// H1
+h1 {
+  font-size: $inuit-font-size-h1 - 25px;
+  line-height: 100%;
+  font-weight:  $font-weight-black;
+}
+
+@include mq($from: tablet) {
+  h1 {
+    font-size: $inuit-font-size-h1;
+  }
+}
+
+// H2
+h2 {
+  font-size: $inuit-font-size-h2;
+  font-weight:  $font-weight-bold;
+  position: relative;
+}
+
+@include mq($from: tablet) {
+  h2 {
+    font-size: $inuit-font-size-h2;
+  }
+}
+
+
+// H3
+h3 {
+    @include inuit-font-size($inuit-font-size-h3);
+    font-weight: $font-weight-medium;
+    color: $brand-primary;
+}
+
+h4 {
+  @include inuit-font-size($inuit-font-size-h4);
+  font-family:  $font-family-global;
+  font-weight:   $font-weight-medium;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
+}

@@ -1,0 +1,210 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  transition: $global-transition;
+  border-radius: $global-radius;
+
+  font-family:  $font-family-heading;
+  font-weight:  $font-weight-medium;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.buttonContainer{
+  margin-bottom: $inuit-global-spacing-unit-large;
+}
+
+
+
+/* ==========================================================================
+   #BUTTON PRIMARY
+   ========================================================================== */
+
+.c-btn--primary {
+  border: 1px solid $brand-primary;
+  color: $white !important;
+  padding: 15px 30px;
+  background-color: $brand-primary;
+  font-weight:  $font-weight-black !important;
+  transition:  $global-transition-fast;
+  text-decoration: none;
+  max-width: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    color: $white !important;
+    font-weight:  $font-weight-black !important;
+    margin-bottom: 0px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+  }
+
+  &:hover{
+    background-color: $brand-primary;
+    color: $white !important;
+    transition:  $global-transition-fast;
+  }
+
+}
+
+@include mq($from: tablet) {
+  .c-btn--primary {
+    cursor: pointer;
+  }
+}
+
+
+/* ==========================================================================
+    #BUTTON SECONDARY
+========================================================================== */
+
+  .c-btn--secondary {
+    background-color: none;
+    font-weight:  $font-weight-black !important;
+    position: relative;
+    text-transform: uppercase;
+
+    padding: 5px 25px;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none; /* [4] */
+    }
+
+    &.white{
+      color: white;
+      border: 4px solid white;
+    }
+
+    &.tertiary{
+      color: $brand-tertiary;
+      border: 4px solid $brand-tertiary;
+    }
+
+    &:hover{
+      span.icon-arrow{
+        margin-left: 10px;
+        transition: 0.5s ease all;
+      }
+    }
+
+  }
+
+  @include mq($from: tablet) {
+
+    .c-btn--secondary {
+      cursor: pointer;
+    }
+  }
+
+
+/* ==========================================================================
+    #BUTTON TERTIARY
+========================================================================== */
+  .c-btn--tertiary {
+    color: $brand-tertiary;
+    font-weight: $font-weight-bold;
+
+    // padding: 5px 25px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $brand-tertiary;
+      text-decoration: none; /* [4] */
+    }
+  }
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+}
+
+.c-btn--large {
+  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+/* ==========================================================================
+    #INLINE
+========================================================================== */
+.inline-button, p a, 
+.detailcomponents a, .detailcomponents p a{
+    position: relative;
+    color: $black;
+    text-decoration: none;
+    margin-left: 5px;
+
+    border-bottom: 0.7px solid $brand-tertiary;
+
+    &:hover{
+      text-decoration: none;
+      color: $brand-primary;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 0%;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      transition: 0.5s ease all;
+    }
+
+    &:hover:after{
+        width: 100%;
+        background-color: $brand-primary;
+        height: 1px;
+        transition: 0.5s ease all;
+    }
+}
+
+@include mq($from: tablet) {
+  .inline-button, p a{
+    &:hover{
+      text-decoration: none;
+      color: $brand-primary;
+    }
+
+    &:hover:after{
+        width: 100%;
+        background-color: $brand-primary;
+        height: 2px;
+        transition: 0.5s ease all;
+    }
+  }
+}

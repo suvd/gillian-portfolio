@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% extends "_layouts/_layout.twig"%}
+
+{% block content %}
+    <section class="o-wrapper">
+        <section class="errorPage__container o-inner-wrapper">
+            <section class="header_small__container">
+                <h1>{{ errorPage.errorPageTitle }}</h1>
+            </section>
+            <div class="errorPage__content-container">
+                {{ errorPage.errorPageText }}
+            </div>
+        </section>
+    </section>
+    {# FOOTER #}
+    {% include "_partials/_footer.twig" with { 'fullfooter': false } %}
+{% endblock %}
+
+{% block _inline_js %}
+{% endblock %}

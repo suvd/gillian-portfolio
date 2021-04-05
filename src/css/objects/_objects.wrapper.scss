@@ -1,0 +1,74 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+/**
+ * Page-level constraining and wrapping elements.
+ */
+
+$inuit-wrapper-width: 1200px !default;
+$inuit-innerwrapper-width: 1000 !default;
+
+@if (type-of($inuit-wrapper-width) != number) {
+  @error "`#{$inuit-wrapper-width}` needs to be a number.";
+}
+
+.o-wrapper {
+  @include inuit-clearfix();
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left:  $inuit-global-spacing-unit-tiny;
+  margin-right: auto;
+  margin-left:  auto;
+  max-width: $inuit-wrapper-width;
+  position: relative;
+
+    height: auto;
+  min-height: 10px;
+
+
+  background-color: #FAFAFB;
+
+  &.blue{
+    background-color: $brand-secondary;
+  }
+
+  &.nocolor{
+    background-color: $white;
+  }
+}
+
+@include mq($from: tablet) {
+
+  .o-wrapper {
+      padding-right: $inuit-global-spacing-unit;
+      padding-left:  $inuit-global-spacing-unit;
+      max-width: $inuit-wrapper-width;
+  }
+
+  // .o-wrapper:after{
+  //   display: none !important;
+  // }
+}
+
+.o-wrapper-inner{
+  max-width: $inuit-innerwrapper-width;
+  width: 90%;
+  margin: auto;
+  position: relative;
+
+  // // TODO CHECK
+  padding-top: $inuit-global-spacing-unit-large;
+  padding-bottom: $inuit-global-spacing-unit-large;
+
+  // // @include mq($from: tablet) {
+  // //   padding-top: $inuit-global-spacing-unit-large;
+  // //   padding-bottom: $inuit-global-spacing-unit-large;
+  // // }]
+
+  &.withcta{
+      padding-top: 0px;
+      margin-top: $inuit-global-spacing-unit-large;
+  }
+}
+
+
