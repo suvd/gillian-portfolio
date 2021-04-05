@@ -1,0 +1,17 @@
+dateModified: 1617622512
+email:
+  fromEmail: iamsuzanvandijck@gmail.com
+  fromName: 'Gillian Vandewyer Portfolio'
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: 'Gillian Vandewyer Portfolio'
+  schemaVersion: 3.6.7
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
