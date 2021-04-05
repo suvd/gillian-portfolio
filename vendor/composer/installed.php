@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '1babd6b4ee43ae33378dd1e3574348fc45929715',
+    'reference' => 'f5058f445176f0c4880c4e5879b322221475eb85',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '1babd6b4ee43ae33378dd1e3574348fc45929715',
+      'reference' => 'f5058f445176f0c4880c4e5879b322221475eb85',
     ),
     'bower-asset/inputmask' => 
     array (
@@ -111,6 +111,15 @@
       ),
       'reference' => '3a2ab820b75ef50b78223f1222a5fe534cc60ba2',
     ),
+    'craftcms/element-api' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '33da444d49950e5adc7aaa3b8e5b917993e6a40b',
+    ),
     'craftcms/oauth2-craftid' => 
     array (
       'pretty_version' => '1.0.0.1',
@@ -128,6 +137,15 @@
       array (
       ),
       'reference' => '23ec472acd4410b70b07d5a02b2b82db9ee3f66b',
+    ),
+    'craftcms/redactor' => 
+    array (
+      'pretty_version' => '2.6.1',
+      'version' => '2.6.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '835eaf0d7442acb1bc716985f9672c7cd4e8531c',
     ),
     'craftcms/server-check' => 
     array (
@@ -244,6 +262,15 @@
       ),
       'reference' => '35ea11d335fd638b5882ff1725228b3d35496ab1',
     ),
+    'intervention/httpauth' => 
+    array (
+      'pretty_version' => '3.0.1',
+      'version' => '3.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '825202e88c0918f5249bd5af6ff1fb8ef6e3271e',
+    ),
     'justinrainbow/json-schema' => 
     array (
       'pretty_version' => '5.2.10',
@@ -298,6 +325,15 @@
       ),
       'reference' => '9be3b16c877d477357c015cec057548cf9b2a14a',
     ),
+    'league/fractal' => 
+    array (
+      'pretty_version' => '0.18.0',
+      'version' => '0.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4e553dae1a9402adbe11c81430a64675dc97b4fc',
+    ),
     'league/mime-type-detection' => 
     array (
       'pretty_version' => '1.7.0',
@@ -316,6 +352,33 @@
       ),
       'reference' => 'badb01e62383430706433191b82506b6df24ad98',
     ),
+    'marcusschwarz/lesserphp' => 
+    array (
+      'pretty_version' => 'v0.5.5',
+      'version' => '0.5.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '77ba82b5218ff228267d3b0e5ec8697be75e86a7',
+    ),
+    'masterminds/html5' => 
+    array (
+      'pretty_version' => '2.7.4',
+      'version' => '2.7.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9227822783c75406cfe400984b2f095cdf03d417',
+    ),
+    'michelf/php-smartypants' => 
+    array (
+      'pretty_version' => '1.8.1',
+      'version' => '1.8.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '47d17c90a4dfd0ccf1f87e25c65e6c8012415aad',
+    ),
     'mikehaertl/php-shellcommand' => 
     array (
       'pretty_version' => '1.6.4',
@@ -325,6 +388,51 @@
       ),
       'reference' => '3488d7803df1e8f1a343d3d0ca452d527ad8d5e5',
     ),
+    'monolog/monolog' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1cb1cde8e8dd0f70cc0fe51354a59acad9302084',
+    ),
+    'mrclay/jsmin-php' => 
+    array (
+      'pretty_version' => '2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bb05febc9440852d39899255afd5569b7f21a72c',
+    ),
+    'mrclay/minify' => 
+    array (
+      'pretty_version' => '3.0.11',
+      'version' => '3.0.11.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f1572a580a8ab29c5c7df4319c4787c74f7dcb3e',
+    ),
+    'mrclay/props-dic' => 
+    array (
+      'pretty_version' => '3.0.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0b0fd254e33e2d60bc2bcd7867f2ab3cdd05a843',
+    ),
+    'mundschenk-at/php-typography' => 
+    array (
+      'pretty_version' => 'v6.6.0',
+      'version' => '6.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '67af39c936751f96a959b9bf211044512675283c',
+    ),
     'nikic/php-parser' => 
     array (
       'pretty_version' => 'v4.10.4',
@@ -333,6 +441,42 @@
       array (
       ),
       'reference' => 'c6d052fc58cb876152f89f532b95a8d7907e7f0e',
+    ),
+    'nystudio107/craft-minify' => 
+    array (
+      'pretty_version' => '1.2.10',
+      'version' => '1.2.10.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '01d5de3f016c9c4a1e62c17e9f3ed981099c3927',
+    ),
+    'nystudio107/craft-scripts' => 
+    array (
+      'pretty_version' => '1.2.12',
+      'version' => '1.2.12.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0794d7e81c533bc549bf672787fa70f1ac4cbf0f',
+    ),
+    'nystudio107/craft-twigpack' => 
+    array (
+      'pretty_version' => '1.2.12',
+      'version' => '1.2.12.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8e53cf18298c3344041c531abce37c5f14127746',
+    ),
+    'nystudio107/craft-typogrify' => 
+    array (
+      'pretty_version' => '1.1.18',
+      'version' => '1.1.18.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '28896d37f184cef87d2bbd84833565d0d732e331',
     ),
     'opis/closure' => 
     array (
@@ -387,6 +531,15 @@
       array (
       ),
       'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
+    ),
+    'pimple/pimple' => 
+    array (
+      'pretty_version' => 'v3.4.0',
+      'version' => '3.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '86406047271859ffc13424a048541f4531f53601',
     ),
     'pixelandtonic/imagine' => 
     array (
@@ -451,7 +604,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psy/psysh' => 
@@ -480,6 +634,15 @@
       array (
       ),
       'reference' => 'f3cff96a19736714524ca0dd1d4130de73dbbbc4',
+    ),
+    'sebastianlenz/linkfield' => 
+    array (
+      'pretty_version' => '1.0.25',
+      'version' => '1.0.25.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a29f328fe41248e9b1722c52f68e435f53c241d3',
     ),
     'seld/cli-prompt' => 
     array (
@@ -688,6 +851,15 @@
       ),
       'reference' => 'a4d0c11a36dd7f4e7cd7096076cab6d3378a071e',
     ),
+    'tubalmartin/cssmin' => 
+    array (
+      'pretty_version' => 'v4.1.1',
+      'version' => '4.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3cbf557f4079d83a06f9c3ff9b957c022d7805cf',
+    ),
     'twig/twig' => 
     array (
       'pretty_version' => 'v2.14.4',
@@ -696,6 +868,42 @@
       array (
       ),
       'reference' => '0b4ba691fb99ec7952d25deb36c0a83061b93bbf',
+    ),
+    'verbb/base' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '006cc4979e2b7669234a90bb7347129fe0185eb8',
+    ),
+    'verbb/expanded-singles' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c15647cff1f74129517f73b4f1c2259626619dd2',
+    ),
+    'verbb/field-manager' => 
+    array (
+      'pretty_version' => '2.2.2',
+      'version' => '2.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ebb8020a2220cd0bc28652b9cf9e4b11a293c278',
+    ),
+    'verbb/super-table' => 
+    array (
+      'pretty_version' => '2.6.7',
+      'version' => '2.6.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bc35da9a3a2eef20338c1e60998c4afd57f84851',
     ),
     'vlucas/phpdotenv' => 
     array (
@@ -840,6 +1048,15 @@
       array (
       ),
       'reference' => 'a6758a2b9c2d8aca9b949f4faa9e3cca0dfbc8be',
+    ),
+    'yiisoft/yii2-redis' => 
+    array (
+      'pretty_version' => '2.0.14',
+      'version' => '2.0.14.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1cbc7b2138ec9b6ffdc08929f8dc1f41848596aa',
     ),
     'yiisoft/yii2-shell' => 
     array (

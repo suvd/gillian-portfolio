@@ -62,7 +62,9 @@
 		{% block _head_js %}{% endblock %}
 
 		{# COOKIE POLICY #}
-		{% if getCookie('cookiesAccepted') %}
+		{# TODO: seaomatic #}
+
+		{# {% if getCookie('cookiesAccepted') %}
  			{% do seomatic.script.container().clearCache(true) %}
 			{% do seomatic.script.get("googleAnalytics").include(true) %}
 			{% do seomatic.script.get('facebookPixel').include(true) %}
@@ -76,7 +78,7 @@
 			{% do seomatic.script.get('gtag').include(false) %}
 			{% do seomatic.script.get('googleTagManager').include(false) %}
 			{% do seomatic.script.container().clearCache(true) %}
-		{% endif %}
+		{% endif %} #}
 
 	</head>
 
@@ -88,9 +90,7 @@
 
 			<div id="app">
 				{{ csrfInput() }}
-				{% include "_partials/_navigation.twig" %}
 				<main>
-					{% include "_partials/_cookiebar.twig" %}
 					{% block content %}{% endblock %}
 				</main>
 			</div>

@@ -7,5 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
+    'Props\\' => array($vendorDir . '/mrclay/props-dic/src'),
+    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'Michelf' => array($vendorDir . '/michelf/php-smartypants'),
+    'JSMin\\' => array($vendorDir . '/mrclay/jsmin-php/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
 );
