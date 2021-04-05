@@ -1,21 +1,18 @@
 <?php
 
 // e.g. postgres://USERNAME:PASSWORD@SERVER:PORT/DB_NAME
-preg_match('|postgres://([a-z0-9]*):([a-z0-9]*)@([^:]*):([0-9]*)/(.*)|i', getenv('DATABASE_URL'), $matches);
 
-$user = $matches[1];
-$password = $matches[2];
-$server = $matches[3];
-$port = $matches[4];
-$database = $matches[5];
+$url = getenv('DATABASE_URL');
+
+$dbparts = parse_url($url);
 
 return [
   'driver' => "pgsql",
-  'server' => localhost,
-  'user' => "Suzan Van Dijck",
-  'password' => "Q29Pepah",
-  'database' => "gillian_portfolio",
+  'server' => $dbparts['host'],
+  'user' => $dbparts['user'],
+  'password' => $dbparts['pass'],
+  'database' => ltrim($dbparts['path'],'/'),
   'schema' => "public",
-  'tablePrefix' => getenv('DB_TABLE_PREFIX'),
-  'port' => 5432
+  'tablePrefix' => 'craft',
+  'port' => $dbparts['port'],
 ];
