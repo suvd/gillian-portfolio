@@ -1,0 +1,10 @@
+{
+  "app.js": "/dist/js/app.b9578b4bd6494cb44a93.js",
+  "app.js.map": "/dist/js/app.b9578b4bd6494cb44a93.js.map",
+  "vendors~vue.js": "/dist/js/vendors~vue.4bee0e8559158510d203.js",
+  "vendors~vue.js.map": "/dist/js/vendors~vue.4bee0e8559158510d203.js.map",
+  "../sw.js": "/dist/../sw.js",
+  "js/app.b9578b4bd6494cb44a93.js.gz": "/dist/js/app.b9578b4bd6494cb44a93.js.gz",
+  "js/precache-manifest.js": "/dist/js/precache-manifest.1e01db08d58e5f82a2386e52456a1e9a.js",
+  "js/vendors~vue.4bee0e8559158510d203.js.gz": "/dist/js/vendors~vue.4bee0e8559158510d203.js.gz"
+}

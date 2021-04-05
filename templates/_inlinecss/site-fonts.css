@@ -1,6 +1,6 @@
 /* -- Site fonts */
 
-@font-face {
+/* @font-face {
     font-family: 'Source Sans Pro';
     font-display: swap;
     src: url('{{ baseUrl }}dist/fonts/sourcesanspro-black-webfont.eot');
@@ -58,4 +58,4 @@
     url('{{ baseUrl }}dist/fonts/sourcesanspro-italic-webfont.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
-}
+} */

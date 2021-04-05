@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import styles from '../css/main.scss'
-import jQuery from 'jquery'
 import 'core-js/es/array/iterator'
 
 //

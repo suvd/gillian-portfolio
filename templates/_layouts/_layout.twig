@@ -35,9 +35,11 @@
 
 		{%- endminify -%}
 
-		{# -- 
-			----- CSS 
-		-- #}
+		{# FONTS #}
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;500&display=swap" rel="stylesheet">
+
+		{# -- CSS -- #}
 		<style>
 			{% include "_inlinecss/site-fonts.css" %}
 		</style>
@@ -62,34 +64,40 @@
 		{% block _head_js %}{% endblock %}
 
 		{# COOKIE POLICY #}
-		{# TODO: seaomatic #}
+		{# TODO: SEO #}
+		{# if: seomatic #}
+		{# {% do seomatic.script.container().clearCache(true) %}
+		{% do seomatic.script.get("googleAnalytics").include(true) %}
+		{% do seomatic.script.get('facebookPixel').include(true) %}
+		{% do seomatic.script.get('gtag').include(true) %}
+		{% do seomatic.script.get('googleTagManager').include(true) %}
+		{% do seomatic.script.container().clearCache(true) %} #}
+		{# else: #}
+		<meta charset="UTF-8">
+		<title>Gillian Vandewyer portfolio</title>
 
-		{# {% if getCookie('cookiesAccepted') %}
- 			{% do seomatic.script.container().clearCache(true) %}
-			{% do seomatic.script.get("googleAnalytics").include(true) %}
-			{% do seomatic.script.get('facebookPixel').include(true) %}
-			{% do seomatic.script.get('gtag').include(true) %}
-			{% do seomatic.script.get('googleTagManager').include(true) %}
-			{% do seomatic.script.container().clearCache(true) %}
-		{% else %}
-			{% do seomatic.script.container().clearCache(false) %}
-			{% do seomatic.script.get("googleAnalytics").include(false) %}
-			{% do seomatic.script.get('facebookPixel').include(false) %}
-			{% do seomatic.script.get('gtag').include(false) %}
-			{% do seomatic.script.get('googleTagManager').include(false) %}
-			{% do seomatic.script.container().clearCache(true) %}
-		{% endif %} #}
+		<meta http-equiv="refresh" content="30">
+		<meta name="author" content="Gillian Vandewyer">
+		<meta name="description" content="">
+		<meta name="keywords" content="html meta tags, web development, learn web development, front end development"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex,nofollow">
 
+		<meta property="og:title" content="Gillian Vandewyer portfolio"/>
+		<meta property="og:description" content=""/>
+		<meta property="og:type" content=""/>
+		<meta property="article:tag" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content="https://gillianvandewyer.com"/>
 	</head>
 
 	{# -- HTML Body -- #}
 	<body>
 		<div id="page-container">
 			<div id="fb-root"></div>
-			{# -- Page header, including _navbar.twig -- #}
+			{% include "_partials/_navbar.twig" %}
 
 			<div id="app">
-				{{ csrfInput() }}
 				<main>
 					{% block content %}{% endblock %}
 				</main>
