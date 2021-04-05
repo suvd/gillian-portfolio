@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f5058f445176f0c4880c4e5879b322221475eb85',
+    'reference' => 'e2851f3cbf2395d2ae7e7fdab1d52db81d69ec17',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f5058f445176f0c4880c4e5879b322221475eb85',
+      'reference' => 'e2851f3cbf2395d2ae7e7fdab1d52db81d69ec17',
     ),
     'bower-asset/inputmask' => 
     array (
