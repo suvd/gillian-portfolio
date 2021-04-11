@@ -26,9 +26,9 @@ module.exports = {
         templates: "./templates/"
     },
     urls: {
-        live: "https://unlock.nl/",
-        local: "https://unlock.test/",
-        critical: "https://unlock.test/",
+        live: "https://gillianvandewyer.be/",
+        local: "https://gillian-portfolio.test/",
+        critical: "https://gillian-portfolio.test/",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
     vars: {

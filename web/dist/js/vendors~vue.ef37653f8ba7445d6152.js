@@ -2,8 +2,8 @@
  * @project        Gillian Vandewyer portfolio
  * @name           vendors~vue.ef37653f8ba7445d6152.js
  * @author         Suzan Van Dijck
- * @build          Mon, Apr 5, 2021 10:52 PM ET
- * @release        3e491c2c6adb129589c2f69e10b37258d0054a79 [master]
+ * @build          Sat, Apr 10, 2021 8:39 PM ET
+ * @release        292fa766de5c243809e7082bef6e136cb51ebfc9 [master]
  * @copyright      Copyright (c) 2021 Suzan Van Dijck
  *
  */

@@ -1,0 +1,110 @@
+.product-slider__container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    // lines start
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        width: 1px;
+        background-color: #979797;
+        top: 0;
+        z-index: -20;
+        opacity: 0.2;
+    }
+    &:before{left: 32%;}
+    &:after{left: 80%;}
+    // lines end
+
+    // slider top
+    .product-slider__top{
+        height: 85%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: relative;
+
+        .product-slider__3D_container{
+            width: 60%;
+            height: 100%;
+            z-index: 0;
+            display: flex;
+            align-items: flex-end;
+
+            .product-slider__3D_model{
+                width: 100%;
+                height: 85%;
+                background-color: transparant;
+                z-index: 5;
+                position: relative;
+                box-shadow:none !important;
+                outline: 0px !important;
+
+            }
+            
+            &:after{
+                content: "";
+                width: 25rem;
+                height: 25rem;
+                background-color: white;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: rotate(45deg);
+            }
+        }
+
+        h1{
+            width: 40%;
+            margin-bottom: 5px;
+            color: $black;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 200;
+            color: $black;
+        }
+    }
+    // slider top end
+
+    // slider bottom
+    .product-slider__bottom{
+       .product-slider__navigation{
+            display: flex;
+            justify-content: space-between;
+
+           ul{
+               display: flex;
+                li{
+                    list-style-type: none;
+                    margin-left: 5px;
+                    font-weight: 200;
+
+                    &:after{
+                        content: "/";
+                        display: inline-block;
+                        width: 5px;
+                        height: 5px;
+                        color: $black;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+
+                    &:last-child:after{
+                        display: none;
+                    }
+                    
+                    &:first-child{
+                        font-weight: 400;
+                    }
+                }
+           }
+       } 
+    }
+    // slider bottom end
+}

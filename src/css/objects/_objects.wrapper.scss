@@ -6,7 +6,7 @@
  * Page-level constraining and wrapping elements.
  */
 
-$inuit-wrapper-width: 1200px !default;
+$inuit-wrapper-width: 1400px !default;
 $inuit-innerwrapper-width: 1000 !default;
 
 @if (type-of($inuit-wrapper-width) != number) {
@@ -15,33 +15,21 @@ $inuit-innerwrapper-width: 1000 !default;
 
 .o-wrapper {
   @include inuit-clearfix();
-  padding-right: $inuit-global-spacing-unit-tiny;
-  padding-left:  $inuit-global-spacing-unit-tiny;
+  // padding-right: $inuit-global-spacing-unit-tiny;
+  // padding-left:  $inuit-global-spacing-unit-tiny;
   margin-right: auto;
   margin-left:  auto;
   max-width: $inuit-wrapper-width;
   position: relative;
-
-    height: auto;
+  height: auto;
   min-height: 10px;
-
-
-  background-color: #FAFAFB;
-
-  &.blue{
-    background-color: $brand-secondary;
-  }
-
-  &.nocolor{
-    background-color: $white;
-  }
 }
 
 @include mq($from: tablet) {
 
   .o-wrapper {
-      padding-right: $inuit-global-spacing-unit;
-      padding-left:  $inuit-global-spacing-unit;
+      // padding-right: $inuit-global-spacing-unit;
+      // padding-left:  $inuit-global-spacing-unit;
       max-width: $inuit-wrapper-width;
   }
 

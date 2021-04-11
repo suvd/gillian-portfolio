@@ -1,11 +1,16 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {#-- Navbar --#}
 
-<nav>
-    <div>
-        <strong>Gillian</strong>Vandewyer
-        Product <strong>Designer</strong>
-        <span></span> Problem solver
-    </div>
-    <a href="#" alt="about">about</a>
+<nav class="navbar__container">
+    <div class="navbar__container__wrapper">
+        <div class="navigation_title">
+            <div class="navigation_title_line"><strong>Gillian</strong>Vandewyer</div>
+            <div class="navigation_title_line">Product<strong>Designer</strong></div>
+            <div class="navigation_title_line"><span></span>Problem solver</div>
+        </div>
+        <div class="navbar__innercontainer">
+            <a href="#" alt="about">about</a>
+            <a href="#" alt="contact">contact</a>
+        </div>
+    </div>   
 </nav>

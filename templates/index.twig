@@ -11,19 +11,42 @@
 {% endblock %}
 
 {% block content %}
-    <section class="product-slider__container">
-        <div class="product-slider__title_container">
-            <h1>SHIBUSHI</h1> 
-            <p>a personal statement</p>
+    <section class="o-wrapper product-slider__container">
+        <div class="product-slider__top">
+            <div class="product-slider__title_container">
+                <h1>SHIBUSHI</h1>
+                <p>a personal statement</p>
+            </div>
+            <div class="product-slider__3D_container">
+                {% set model = dFile.modelFile.one() %}
+                {% set modelPoster = dFile.	modelfileposter.one() %}
+                <model-viewer 
+                    id="modelviewer"
+                    class="product-slider__3D_model" 
+                    src="{{model.url}}" 
+                    alt="A 3D model of an astronaut" 
+                    camera-controls
+                    disable-zoom
+                    data-js-focus-visible
+                ></model-viewer>
+{# loading="eager"  #}
+{# # poster="{{modelPoster.url}}" #}
+{# reveal="interaction"  #}
+
+            </div>
         </div>
-        <div class="product-slider__navigation">
-            <a href="#" alt="">Read more</a>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
+        <div class="product-slider__bottom">
+            <div class="product-slider__navigation">
+                <a class="c-btn c-btn--primary" href="#" alt="">
+                    Read more <span></span>
+                </a>
+                <ul>
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                </ul>
+            </div>
         </div>
     </section>
 {% endblock %}

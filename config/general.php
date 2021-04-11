@@ -56,6 +56,8 @@ return [
         ],
 
         'resourceBasePath' => dirname(__DIR__) . '/web/cpresources',
+
+        'extraAllowedFileExtensions' => 'glb'
     ],
 
     // Dev environment settings

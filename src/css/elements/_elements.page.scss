@@ -31,3 +31,10 @@ body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
   outline: none;
 }
+
+// general styling
+body{
+  background-color: $gray-light;
+  font-size: 16px;
+  font-family:  $font-family-global;
+}

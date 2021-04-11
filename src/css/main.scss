@@ -80,8 +80,7 @@
 @import "settings/settings.global";
 
 
-
-
+// general styling
 
 // TOOLS
 // @import "tools/tools.font-face";
@@ -140,6 +139,7 @@
 //
 // Build and include your project’s UI components here.
 @import "components/components.buttons";
+@import "components/components.product-slider";
 
 
 

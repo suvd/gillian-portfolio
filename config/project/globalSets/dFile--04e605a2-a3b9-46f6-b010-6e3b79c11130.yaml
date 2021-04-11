@@ -1,0 +1,27 @@
+fieldLayouts:
+  30b21b38-15a2-409a-8adc-763eb3cb1b92:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7f070554-1ffc-43b0-b717-44921df8e59e # model file
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8dc26342-1834-4a28-ad77-28b82448e537 # modelFilePoster
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 3D
+        sortOrder: 1
+handle: dFile
+name: '3D file'

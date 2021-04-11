@@ -57,11 +57,14 @@
 
 			{{ craft.twigpack.includeCssModule("styles.css", true) }}
 		<!--#endif-->
-
+		
 		{# -- 
 			----- JS 
 		-- #}
 		{% block _head_js %}{% endblock %}
+
+		{# MODEL VIEWER #}
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 		{# COOKIE POLICY #}
 		{# TODO: SEO #}
