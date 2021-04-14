@@ -10,7 +10,7 @@ import 'core-js/es/array/iterator'
 //
 // COMPONENTS
 //
-// import Navigation from './navigation.js'
+import About from './about.js'
 
 // App main
 const main = async () => {
@@ -37,5 +37,7 @@ const main = async () => {
 }
 // Execute async function
 main().then((value) => {
+    // START ABOUT
+    
     // if (document.getElementById('supermachine-logo').src) document.getElementById('supermachine-logo').src = supermachineLogo
 })

@@ -18,9 +18,11 @@
 //   ==========================font-weight============================================== */
 
 $black: #252525;
+$black-light: #BDBDBD;
 $white: #F7F7F7;
 $gray: #E5E5E5;
 $gray-light: #F7F7F7;
+
 
 $brand-primary: #252525;
 $brand-secondary: #458DBF;
@@ -44,7 +46,7 @@ $inuit-wrapper-width: 1200px;
  $font-weight-bold: 700;
  $font-weight-black: 900;
  
- $font-family-global: 'Lexend', sans-serif;
+ $font-family-global: 'Lato', sans-serif;
  $font-family-heading: 'Lexend', sans-serif;
  
  $h1-font-sizes: (
@@ -177,6 +179,7 @@ $global-opacity: 0.75;
 //   Standardise some UI treatments.
 
 $global-transition: all 300ms ease-in-out !default;
+$global-transition-slow: all 600ms ease-in-out !default;
  
 $time-small: 0.220s;
 $time: 0.440s;

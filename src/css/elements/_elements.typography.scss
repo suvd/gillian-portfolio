@@ -20,8 +20,8 @@ $inuit-font-size-h4:  16px !default;
 $inuit-font-size-h5:  18px !default;
 $inuit-font-size-h6:  16px !default;
 
-$inuit-font-size-body:  16px !default;
-$inuit-font-size-body-big:  18px !default;
+$inuit-font-size-body:  20px !default;
+$inuit-font-size-body-big:  30px !default;
 
 
 
@@ -43,6 +43,7 @@ p{
   line-height: 180%;
   margin-bottom: $inuit-global-spacing-unit-small;
   font-weight: $font-weight-regular;
+  font-family:  $font-family-global;
 
   strong{
     font-weight:  $font-weight-bold;
