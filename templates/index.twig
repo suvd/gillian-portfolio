@@ -12,39 +12,118 @@
 
 {% block content %}
     <section data-barba="container" data-barba-namespace="home"  class="o-wrapper product-slider__container">
-        <div class="product-slider__top">
-            <div class="product-slider__title_container">
-                <h1>SHIBUSHI</h1>
-                <p>a personal statement</p>
-            </div>
-            <div class="product-slider__3D_container">
-                {% set model = dFile.modelFile.one() %}
-                {% set modelPoster = dFile.	modelfileposter.one() %}
-                <model-viewer 
-                    id="modelviewer"
-                    class="product-slider__3D_model" 
-                    src="{{model.url}}" 
-                    alt="A 3D model of an astronaut" 
-                    camera-controls
-                    disable-zoom
-                    data-js-focus-visible
-                ></model-viewer>
-                {# loading="eager"  #}
-                {# # poster="{{modelPoster.url}}" #}
-                {# reveal="interaction"  #}
+        <div id="nav">
+            <div id="prevtBtn">prev</div>
+            <div id="nextBtn">next</div>
+        </div>
+        <div id="Dots"></div>
+
+        <div class="product-slider__slide">
+            <div class="product-slider__slide__inner">
+                <div class="product-slider__top">
+                    <div class="product-slider__title_container">
+                        <h1>SHIBUSHI 1</h1>
+                        <p>a personal statement</p>
+                    </div>
+                    <div class="product-slider__3D_container">
+                        {% set model = dFile.modelFile.one() %}
+                        {% set modelPoster = dFile.	modelfileposter.one() %}
+                        <model-viewer 
+                            id="modelviewer"
+                            class="product-slider__3D_model" 
+                            src="{{model.url}}" 
+                            alt="A 3D model of an astronaut" 
+                            camera-controls
+                            disable-zoom
+                            data-js-focus-visible
+                        ></model-viewer>
+                        {# loading="eager"  #}
+                        {# # poster="{{modelPoster.url}}" #}
+                        {# reveal="interaction"  #}
+                    </div>
+                </div>
+                <div class="product-slider__bottom">
+                    <div class="product-slider__navigation">
+                        <a class="c-btn c-btn--primary" href="/test" alt="">
+                            Read more <span></span>
+                        </a>
+                        {# <ul>
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                        </ul> #}
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="product-slider__bottom">
-            <div class="product-slider__navigation">
-                <a class="c-btn c-btn--primary" href="/test" alt="">
-                    Read more <span></span>
-                </a>
-                <ul>
-                    <li>01</li>
-                    <li>02</li>
-                    <li>03</li>
-                    <li>04</li>
-                </ul>
+        <div class="product-slider__slide">
+<div class="product-slider__slide__inner o-wrapper">
+
+                <div class="product-slider__top">
+                    <div class="product-slider__title_container">
+                        <h1>SHIBUSHI 2</h1>
+                        <p>a personal statement</p>
+                    </div>
+                    <div class="product-slider__3D_container">
+                        {% set model = dFile.modelFile.one() %}
+                        {% set modelPoster = dFile.	modelfileposter.one() %}
+                        <model-viewer id="modelviewer" 
+                            class="product-slider__3D_model" 
+                            src="{{model.url}}" 
+                            alt="A 3D model of an astronaut" 
+                            camera-controls disable-zoom data-js-focus-visible 
+                            poster="{{modelPoster.url}}"
+                            reveal="interaction"
+                            loading="eager"
+                        ></model-viewer>
+                    </div>
+                </div>
+                <div class="product-slider__bottom">
+                    <div class="product-slider__navigation">
+                        <a class="c-btn c-btn--primary" href="/test" alt="">
+                            Read more
+                            <span></span>
+                        </a>
+                        {# <ul>
+                                                <li>01</li>
+                                                <li>02</li>
+                                                <li>03</li>
+                                                <li>04</li>
+                                            </ul> #}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-slider__slide">
+            <div class="product-slider__slide__inner">
+                <div class="product-slider__top">
+                    <div class="product-slider__title_container">
+                        <h1>SHIBUSHI 3</h1>
+                        <p>a personal statement</p>
+                    </div>
+                    <div class="product-slider__3D_container">
+                        {% set model = dFile.modelFile.one() %}
+                        {% set modelPoster = dFile.	modelfileposter.one() %}
+                        <model-viewer id="modelviewer" class="product-slider__3D_model" src="{{model.url}}" alt="A 3D model of an astronaut" camera-controls disable-zoom data-js-focus-visible poster="{{modelPoster.url}}"></model-viewer>
+                        {# loading="eager"  #}
+                        {# reveal="interaction"  #}
+                    </div>
+                </div>
+                <div class="product-slider__bottom">
+                    <div class="product-slider__navigation">
+                        <a class="c-btn c-btn--primary" href="/test" alt="">
+                            Read more
+                            <span></span>
+                        </a>
+                        {# <ul>
+                                                <li>01</li>
+                                                <li>02</li>
+                                                <li>03</li>
+                                                <li>04</li>
+                                            </ul> #}
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@ import 'core-js/es/array/iterator'
 // PLUGINS
 import barba from '@barba/core';
 import gsap from 'gsap';
-
+import { TweenLite } from 'gsap';
 
 //
 // ASSETS IMPORT
@@ -16,6 +16,7 @@ import gsap from 'gsap';
 // COMPONENTS
 //
 import About from './about.js'
+import Slideshow from './slideshow.js'
 
 // App main
 const main = async () => {

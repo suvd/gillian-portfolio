@@ -28,6 +28,19 @@
         justify-content: space-between;
         position: relative;
 
+        .product-slider__title_container{
+            width: 45%;
+
+            h1{
+                width: 100%;
+            }
+        }
+
+        // 3D
+        model-viewer{
+            --progress-bar-color: rgba(0,0,0,0);
+        }
+
         .product-slider__3D_container{
             width: 60%;
             height: 100%;
@@ -74,12 +87,12 @@
 
     // slider bottom
     .product-slider__bottom{
-       .product-slider__navigation{
+        .product-slider__navigation{
             display: flex;
             justify-content: space-between;
 
-           ul{
-               display: flex;
+            ul{
+                display: flex;
                 li{
                     list-style-type: none;
                     margin-left: 5px;
@@ -103,8 +116,76 @@
                         font-weight: 400;
                     }
                 }
-           }
-       } 
+            }
+        } 
     }
     // slider bottom end
+}
+
+
+
+
+
+
+
+
+////
+// SLIDER
+//// 
+
+// TODO nav + buttons
+#nav{ 
+    position: absolute;
+    left:50%;
+    top: 50%;
+    z-index:5000; 
+    text-align: center; 
+}
+
+#Dots{ 
+  position: absolute; 
+  z-index:5000;
+  bottom:40px; 
+  left:50%;
+  transform:translate(-50%,0%);    
+}
+
+.Dot{
+    width:8px; 
+    height: 8px; 
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    opacity:1;
+    margin:5px; margin-bottom:0px;
+    cursor: pointer;
+    border:2px solid red;
+}
+
+#prevtBtn,#nextBtn{
+    color: white;
+    font-size: 45px;
+    margin: 15px 15px 0px 15px;
+    position: relative;
+    cursor: pointer;
+}
+// TODO nav + buttons
+
+.product-slider__slide {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+.product-slider__slide .product-slider__slide__inner{
+    display:block;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    left:50%; 
+    top:50%;
+
+    max-width: $inuit-innerwrapper-width;
+    width: 90%;
+    height: 100%;
 }

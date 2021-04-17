@@ -9,16 +9,20 @@ var About = (function () {
     init()
 
     function init () {
-        aboutButton.addEventListener("click", function (e) {
-            e.preventDefault();
-            about.classList.add("visible");
-            productsliderContent.classList.add("hide");
-        });
-        closeButton.addEventListener("click", function (e) {
-            e.preventDefault();
-            about.classList.remove("visible");
-            productsliderContent.classList.remove("hide");
-        });
+        if (aboutButton) {
+            aboutButton.addEventListener("click", function (e) {
+                e.preventDefault();
+                about.classList.add("visible");
+                productsliderContent.classList.add("hide");
+            });
+        }
+        if (closeButton) {
+            closeButton.addEventListener("click", function (e) {
+                e.preventDefault();
+                about.classList.remove("visible");
+                productsliderContent.classList.remove("hide");
+            });
+        }
     }
 
     return {
