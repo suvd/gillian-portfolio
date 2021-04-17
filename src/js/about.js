@@ -21,10 +21,6 @@ var About = (function () {
         });
     }
 
-    // function handleAccept () {
-
-    // }
-
     return {
         init: init
     }
