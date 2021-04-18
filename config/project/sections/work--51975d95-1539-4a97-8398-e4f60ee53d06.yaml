@@ -6,8 +6,8 @@ siteSettings:
   995246aa-d6d7-465c-a0cb-6a7318e715b9: # Gillian Vandewyer Portfolio
     enabledByDefault: true
     hasUrls: true
-    template: work/_entry
-    uriFormat: 'work/{slug}'
+    template: /_entry
+    uriFormat: '{slug}'
 structure:
   maxLevels: 1
   uid: bc5ba134-be6a-45ec-9814-0f3f6af3d877
