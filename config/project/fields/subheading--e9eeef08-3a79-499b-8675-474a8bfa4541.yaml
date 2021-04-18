@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 3d4894b5-b5aa-4eff-86d3-9dd7913614dc # Work
+handle: subheading
+instructions: ''
+name: subheading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

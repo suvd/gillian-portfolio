@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 2526bb3c-700c-42bb-b4d0-e7444c4630ef # Common
+fieldGroup: 3d4894b5-b5aa-4eff-86d3-9dd7913614dc # Work
 handle: modelfileposter
 instructions: ''
 name: modelFilePoster
@@ -10,12 +10,12 @@ settings:
   allowedKinds: null
   defaultUploadLocationSource: 'volume:1e5f77d8-5843-4b3f-ac7e-0d9d0a8d489b' # General
   defaultUploadLocationSubpath: ''
-  limit: ''
+  limit: '1'
   localizeRelations: false
   previewMode: full
   restrictFiles: ''
   selectionLabel: ''
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:1e5f77d8-5843-4b3f-ac7e-0d9d0a8d489b' # General

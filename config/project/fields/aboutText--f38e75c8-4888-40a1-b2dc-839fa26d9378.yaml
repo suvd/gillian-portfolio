@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: d5d3e385-16ba-43b0-ba20-280a203e7d44 # About
+handle: aboutText
+instructions: ''
+name: 'about text'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

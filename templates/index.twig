@@ -18,114 +18,46 @@
         </div>
         <div id="Dots"></div>
 
-        <div class="product-slider__slide">
-            <div class="product-slider__slide__inner">
-                <div class="product-slider__top">
-                    <div class="product-slider__title_container">
-                        <h1>SHIBUSHI 1</h1>
-                        <p>a personal statement</p>
+        {% set entries = craft.entries.section('work').all() %}
+        {% for e in entries %}
+            <div class="product-slider__slide">
+                <div class="product-slider__slide__inner o-wrapper">
+                    <div class="product-slider__top">
+                        <div class="product-slider__title_container">
+                            <h1>{{e.heading}}</h1>
+                            <p>{{e.subheading}}</p>
+                        </div>
+                        <div class="product-slider__3D_container">
+                            {% set model = e.modelFile.one() %}
+                            {% set modelPoster = e.	modelfileposter.one() %}
+                            <model-viewer id="modelviewer" 
+                                class="product-slider__3D_model" 
+                                src="{{model.url}}" 
+                                alt="A 3D model of an astronaut" 
+                                camera-controls disable-zoom data-js-focus-visible 
+                                poster="{{modelPoster.url}}"
+                                reveal="interaction"
+                                loading="eager"
+                            ></model-viewer>
+                        </div>
                     </div>
-                    <div class="product-slider__3D_container">
-                        {% set model = dFile.modelFile.one() %}
-                        {% set modelPoster = dFile.	modelfileposter.one() %}
-                        <model-viewer 
-                            id="modelviewer"
-                            class="product-slider__3D_model" 
-                            src="{{model.url}}" 
-                            alt="A 3D model of an astronaut" 
-                            camera-controls
-                            disable-zoom
-                            data-js-focus-visible
-                        ></model-viewer>
-                        {# loading="eager"  #}
-                        {# # poster="{{modelPoster.url}}" #}
-                        {# reveal="interaction"  #}
-                    </div>
-                </div>
-                <div class="product-slider__bottom">
-                    <div class="product-slider__navigation">
-                        <a class="c-btn c-btn--primary" href="/test" alt="">
-                            Read more <span></span>
-                        </a>
-                        {# <ul>
-                            <li>01</li>
-                            <li>02</li>
-                            <li>03</li>
-                            <li>04</li>
-                        </ul> #}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product-slider__slide">
-<div class="product-slider__slide__inner o-wrapper">
-
-                <div class="product-slider__top">
-                    <div class="product-slider__title_container">
-                        <h1>SHIBUSHI 2</h1>
-                        <p>a personal statement</p>
-                    </div>
-                    <div class="product-slider__3D_container">
-                        {% set model = dFile.modelFile.one() %}
-                        {% set modelPoster = dFile.	modelfileposter.one() %}
-                        <model-viewer id="modelviewer" 
-                            class="product-slider__3D_model" 
-                            src="{{model.url}}" 
-                            alt="A 3D model of an astronaut" 
-                            camera-controls disable-zoom data-js-focus-visible 
-                            poster="{{modelPoster.url}}"
-                            reveal="interaction"
-                            loading="eager"
-                        ></model-viewer>
-                    </div>
-                </div>
-                <div class="product-slider__bottom">
-                    <div class="product-slider__navigation">
-                        <a class="c-btn c-btn--primary" href="/test" alt="">
-                            Read more
-                            <span></span>
-                        </a>
-                        {# <ul>
-                                                <li>01</li>
-                                                <li>02</li>
-                                                <li>03</li>
-                                                <li>04</li>
-                                            </ul> #}
+                    <div class="product-slider__bottom">
+                        <div class="product-slider__navigation">
+                            <a class="c-btn c-btn--primary" href="{{e.url}}" alt="{{e.heading}}">
+                                Read more
+                                <span></span>
+                            </a>
+                            {# <ul>
+                                <li>01</li>
+                                <li>02</li>
+                                <li>03</li>
+                                <li>04</li>
+                            </ul> #}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="product-slider__slide">
-            <div class="product-slider__slide__inner">
-                <div class="product-slider__top">
-                    <div class="product-slider__title_container">
-                        <h1>SHIBUSHI 3</h1>
-                        <p>a personal statement</p>
-                    </div>
-                    <div class="product-slider__3D_container">
-                        {% set model = dFile.modelFile.one() %}
-                        {% set modelPoster = dFile.	modelfileposter.one() %}
-                        <model-viewer id="modelviewer" class="product-slider__3D_model" src="{{model.url}}" alt="A 3D model of an astronaut" camera-controls disable-zoom data-js-focus-visible poster="{{modelPoster.url}}"></model-viewer>
-                        {# loading="eager"  #}
-                        {# reveal="interaction"  #}
-                    </div>
-                </div>
-                <div class="product-slider__bottom">
-                    <div class="product-slider__navigation">
-                        <a class="c-btn c-btn--primary" href="/test" alt="">
-                            Read more
-                            <span></span>
-                        </a>
-                        {# <ul>
-                                                <li>01</li>
-                                                <li>02</li>
-                                                <li>03</li>
-                                                <li>04</li>
-                                            </ul> #}
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </section>
     <section class="about__container" id="about">
         <div class="about__innercontainer">
@@ -134,16 +66,20 @@
             </a>
             <div class="about__content">
                 <h2>about</h2>
-                <p>I’m a  <strong>Belgian designer</strong> with roots in technology, arts and anything that has to do with making things. I love problem solving, photography, creative thinking, coffee, and many other stuff.</p>
-                <p><strong>Unorthodox thinking</strong> is what takes me off the beaten tracktowards solutions and situations that develop into great things, memories, lessons or just a good story to tell at the proverbial campfire.</p></p>
+                {{about.aboutText}}
+
             </div>
             <div class="about__contact">
                 <h2>about</h2>
                 <div class="about__contact-links">
-                    <a class="c-btn text mail" href="mailto:Gillianvandewyer@hotmail.com" alt="Gillianvandewyer@hotmail.com">Gillianvandewyer@hotmail.com</a>
+                    {% if about.email|length %}<a class="c-btn text mail" href="mailto:{{about.email}}" target="blank" alt="{{about.email}}">{{about.email}}</a>{% endif %}
                     <div class="about__contact-socials">
-                        <a class="c-btn text" href="mailto:Gillianvandewyer@hotmail.com" alt="Gillianvandewyer@hotmail.com">Linkedin</a>
-                        <a class="c-btn text" href="mailto:Gillianvandewyer@hotmail.com" alt="Gillianvandewyer@hotmail.com">Instagram</a>
+                        {% if about.linkedin|length %}
+                            <a class="c-btn text" href="https://be.linkedin.com/in/{{about.linkedin}}" target="blank" alt="Linkedin">Linkedin</a>
+                        {% endif %}
+                        {% if about.instagram|length %}
+                            <a class="c-btn text" href="https://www.instagram.com/{{about.instagram}}" target="blank" alt="Instagram">Instagram</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

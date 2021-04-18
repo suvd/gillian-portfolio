@@ -1,0 +1,45 @@
+fieldLayouts:
+  725cfd5d-bc7e-4f2b-b728-df3bf934a64c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f38e75c8-4888-40a1-b2dc-839fa26d9378 # about text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d3bed11a-67ad-4930-9215-d3baa45f777c # email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6338f904-82ba-49ab-b837-cb9432a0f8cd # instagram
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5ba7e590-1b78-4113-b182-fa3d74f71e14 # linkedin
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: text
+        sortOrder: 1
+handle: about
+name: About
