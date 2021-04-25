@@ -18,46 +18,49 @@
         </div>
         <div id="Dots"></div>
 
-        {% set entries = craft.entries.section('work').all() %}
-        {% for e in entries %}
-            <div class="product-slider__slide">
-                <div class="product-slider__slide__inner o-wrapper">
-                    <div class="product-slider__top">
-                        <div class="product-slider__title_container">
-                            <h1>{{e.heading}}</h1>
-                            <p>{{e.subheading}}</p>
+        <div class="product-slider">
+            {% set entries = craft.entries.section('work').all() %}
+            {% for e in entries %}
+                <div class="product-slider__slide">
+                    <div class="product-slider__slide__inner o-wrapper">
+                        <div class="product-slider__top">
+                            <div class="product-slider__title_container">
+                                <h1>{{e.heading}}</h1>
+                                <p>{{e.subheading}}</p>
+                            </div>
+                            <div class="product-slider__3D_container">
+                                {% set model = e.modelFile.one() %}
+                                {% set modelPoster = e.	modelfileposter.one() %}
+                                <model-viewer id="modelviewer" 
+                                    class="product-slider__3D_model" 
+                                    src="{{model.url}}" 
+                                    alt="A 3D model of an astronaut" 
+                                    camera-controls disable-zoom data-js-focus-visible 
+                                    poster="{{modelPoster.url}}"
+                                    reveal="interaction"
+                                    loading="eager"
+                                ></model-viewer>
+                            </div>
                         </div>
-                        <div class="product-slider__3D_container">
-                            {% set model = e.modelFile.one() %}
-                            {% set modelPoster = e.	modelfileposter.one() %}
-                            <model-viewer id="modelviewer" 
-                                class="product-slider__3D_model" 
-                                src="{{model.url}}" 
-                                alt="A 3D model of an astronaut" 
-                                camera-controls disable-zoom data-js-focus-visible 
-                                poster="{{modelPoster.url}}"
-                                reveal="interaction"
-                                loading="eager"
-                            ></model-viewer>
-                        </div>
-                    </div>
-                    <div class="product-slider__bottom">
-                        <div class="product-slider__navigation">
-                            <a class="c-btn c-btn--primary" href="{{e.url}}" alt="{{e.heading}}">
-                                Read more
-                                <span></span>
-                            </a>
-                            {# <ul>
-                                <li>01</li>
-                                <li>02</li>
-                                <li>03</li>
-                                <li>04</li>
-                            </ul> #}
+                        <div class="product-slider__bottom">
+                            <div class="product-slider__navigation">
+                                <a class="c-btn c-btn--primary" href="{{e.url}}" alt="{{e.heading}}">
+                                    Read more
+                                    <span></span>
+                                </a>
+                                {# <ul>
+                                    <li>01</li>
+                                    <li>02</li>
+                                    <li>03</li>
+                                    <li>04</li>
+                                </ul> #}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
+
     </section>
     <section class="about__container" id="about">
         <div class="about__innercontainer">
@@ -80,6 +83,76 @@
                         {% if about.instagram|length %}
                             <a class="c-btn text" href="https://www.instagram.com/{{about.instagram}}" target="blank" alt="Instagram">Instagram</a>
                         {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__imagecontainer" id="about__imagecontainer">
+            <div class="about__imagecontainer__inner" aria-hidden="true">
+                <div class="group1">
+                    <div class="about__imagecontainer-image">
+                        {% set image1 = about.aboutImage1.one() %}
+                        <img src="{{image1.url}}" alt="{{image1}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image2 = about.aboutImage2.one() %}
+                        <img src="{{image2.url}}" alt="{{image2}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image3 = about.aboutImage3.one() %}
+                        <img src="{{image3.url}}" alt="{{image3}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image4 = about.aboutImage4.one() %}
+                        <img src="{{image4.url}}" alt="{{image4}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image5 = about.aboutImage5.one() %}
+                        <img src="{{image5.url}}" alt="{{image5}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image6 = about.aboutImage6.one() %}
+                        <img src="{{image6.url}}" alt="{{image6}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image7 = about.aboutImage7.one() %}
+                        <img src="{{image7.url}}" alt="{{image7}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image8 = about.aboutImage8.one() %}
+                        <img src="{{image8.url}}" alt="{{image8}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image1 = about.aboutImage1.one() %}
+                        <img src="{{image1.url}}" alt="{{image1}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image2 = about.aboutImage2.one() %}
+                        <img src="{{image2.url}}" alt="{{image2}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image3 = about.aboutImage3.one() %}
+                        <img src="{{image3.url}}" alt="{{image3}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image4 = about.aboutImage4.one() %}
+                        <img src="{{image4.url}}" alt="{{image4}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image5 = about.aboutImage5.one() %}
+                        <img src="{{image5.url}}" alt="{{image5}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image6 = about.aboutImage6.one() %}
+                        <img src="{{image6.url}}" alt="{{image6}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image7 = about.aboutImage7.one() %}
+                        <img src="{{image7.url}}" alt="{{image7}}"/>
+                    </div>
+                    <div class="about__imagecontainer-image">
+                        {% set image8 = about.aboutImage8.one() %}
+                        <img src="{{image8.url}}" alt="{{image8}}"/>
                     </div>
                 </div>
             </div>

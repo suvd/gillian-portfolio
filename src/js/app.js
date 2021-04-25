@@ -5,7 +5,7 @@ import 'core-js/es/array/iterator'
 // PLUGINS
 import barba from '@barba/core';
 import gsap from 'gsap';
-import { TweenLite } from 'gsap';
+
 
 //
 // ASSETS IMPORT

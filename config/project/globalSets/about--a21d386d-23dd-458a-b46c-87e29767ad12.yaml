@@ -41,5 +41,81 @@ fieldLayouts:
             width: 100
         name: text
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: e8af217d-64d5-48f5-bb59-79adcffdb709 # About image 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5d7ee6a9-27b8-446b-a7ad-de36b408a821 # About image 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ca174b9b-afe0-4f43-b104-f5f4be9bb4a1 # About image 3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c18904fb-aefb-4c89-8e73-780296f5596f # About image 4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30230d80-21e4-4db0-aa40-679458236a25 # About image 5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4bf8ac32-29f3-4b66-9dca-6df379c4d6a4 # About image 6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 154c8e89-d116-46df-9672-9d5ce8fb8e6b # About image 7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ddfd66f-80fa-4f3e-8323-cad56734b98c # About image 8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
+        sortOrder: 2
 handle: about
 name: About
