@@ -1,34 +1,89 @@
+.product__container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &:after {
+        content:"";
+        position: absolute;
+        z-index: -10;
+        width:200vw;
+        height: 200vh;
+        left: -50%;
+        top: -50%;
+        background-image: url("../img/grain.png"); 
+        animation: grain 1.5s steps(6) infinite;
+    }
+
+    @keyframes grain {
+        0%, 100% {transform: translate(0,0);}
+        10% {transform: translate(-5%,-10%);}
+        30% {transform: translate(3%,-15%);}
+        50% {transform: translate(12%,9%);}
+        70% {transform: translate(9%,4%);}
+        90% {transform: translate(-1%,7%);}
+    }
+}
+
+// product slider function
 .product-slider{
     opacity: 1;
-
     &.hide{
         opacity: 0;
         transition: $global-transition-fast;
     }
 }
 
-
 .product-slider__container{
     height: 100vh;
     width: 100vw;
     position: relative;
-
     // lines start
-    &:before,
-    &:after{
-        content: '';
-        position: absolute;
-        display: inline-block;
-        height: 100%;
-        width: 1px;
-        background-color: #979797;
-        top: 0;
-        z-index: -20;
-        opacity: 0.2;
-    }
-    &:before{left: 32%;}
-    &:after{left: 80%;}
+    // &:before,
+    // &:after{
+    //     content: '';
+    //     position: absolute;
+    //     display: inline-block;
+    //     height: 100%;
+    //     width: 1px;
+    //     background-color: #979797;
+    //     top: 0;
+    //     z-index: -20;
+    //     opacity: 0.2;
+    // }
+    // &:before{left: 32%;}
+    // &:after{left: 80%;}
     // lines end
+
+    // buttons start
+    .product-slider__nav{ 
+        position: absolute;
+        left:calc(100% - 160px);
+        bottom: 10%;
+        z-index:5000; 
+        text-align: center; 
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 160px;
+        
+        .button{
+            border: 1px solid #979797;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            background-image: url("../img/arrow.svg"); 
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &#prevtBtn{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    // buttons end
 
     // slider top
     .product-slider__top{
@@ -40,9 +95,18 @@
 
         .product-slider__title_container{
             width: 45%;
+            margin-bottom: 30px;
 
             h1{
                 width: 100%;
+                font-family:  $font-family-heading;
+                font-size: 90px;
+                font-weight: $font-weight-regular;
+            }
+
+            p{
+                font-weight: $font-weight-light;
+                font-family: $font-family-heading;
             }
         }
 
@@ -66,18 +130,18 @@
                 position: relative;
                 box-shadow:none !important;
                 outline: 0px !important;
-
             }
             
             &:after{
                 content: "";
-                width: 25rem;
-                height: 25rem;
-                background-color: white;
+                width: 35rem;
+                height: 35rem;
+                background-image: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
                 position: absolute;
-                top: 30%;
-                left: 50%;
+                top: 20%;
+                left: 45%;
                 transform: rotate(45deg);
+                border-radius: 1000px;
             }
         }
 
@@ -143,14 +207,6 @@
 // SLIDER
 //// 
 
-// TODO nav + buttons
-#nav{ 
-    position: absolute;
-    left:50%;
-    top: 50%;
-    z-index:5000; 
-    text-align: center; 
-}
 
 #Dots{ 
   position: absolute; 
@@ -160,25 +216,17 @@
   transform:translate(-50%,0%);    
 }
 
-.Dot{
-    width:8px; 
-    height: 8px; 
-    border-radius: 50%;
-    position: relative;
-    float: left;
-    opacity:1;
-    margin:5px; margin-bottom:0px;
-    cursor: pointer;
-    border:2px solid red;
-}
-
-#prevtBtn,#nextBtn{
-    color: white;
-    font-size: 45px;
-    margin: 15px 15px 0px 15px;
-    position: relative;
-    cursor: pointer;
-}
+// .Dot{
+//     width:8px; 
+//     height: 8px; 
+//     border-radius: 50%;
+//     position: relative;
+//     float: left;
+//     opacity:1;
+//     margin:5px; margin-bottom:0px;
+//     cursor: pointer;
+//     border:2px solid red;
+// }
 // TODO nav + buttons
 
 .product-slider__slide {
@@ -193,7 +241,7 @@
     position:absolute;
     transform:translate(-50%,-50%);
     left:50%; 
-    top:50%;
+    top:52%;
 
     max-width: $inuit-innerwrapper-width;
     width: 90%;

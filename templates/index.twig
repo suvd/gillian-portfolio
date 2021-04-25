@@ -11,57 +11,52 @@
 {% endblock %}
 
 {% block content %}
-    <section data-barba="container" data-barba-namespace="home"  class="o-wrapper product-slider__container">
-        <div id="nav">
-            <div id="prevtBtn">prev</div>
-            <div id="nextBtn">next</div>
-        </div>
-        <div id="Dots"></div>
-
-        <div class="product-slider">
-            {% set entries = craft.entries.section('work').all() %}
-            {% for e in entries %}
-                <div class="product-slider__slide">
-                    <div class="product-slider__slide__inner o-wrapper">
-                        <div class="product-slider__top">
-                            <div class="product-slider__title_container">
-                                <h1>{{e.heading}}</h1>
-                                <p>{{e.subheading}}</p>
-                            </div>
-                            <div class="product-slider__3D_container">
-                                {% set model = e.modelFile.one() %}
-                                {% set modelPoster = e.	modelfileposter.one() %}
-                                <model-viewer id="modelviewer" 
-                                    class="product-slider__3D_model" 
-                                    src="{{model.url}}" 
-                                    alt="A 3D model of an astronaut" 
-                                    camera-controls disable-zoom data-js-focus-visible 
-                                    poster="{{modelPoster.url}}"
+    <div class="product__container">
+        <section data-barba="container" data-barba-namespace="home"  class="o-wrapper product-slider__container">
+            <div id="nav" class="product-slider__nav">
+                <div class="button" id="prevtBtn"></div>
+                <div class="button"  id="nextBtn"></div>
+            </div>
+            <div id="Dots"></div>
+            <div class="product-slider">
+                {% set entries = craft.entries.section('work').all() %}
+                {% for e in entries %}
+                    <div class="product-slider__slide">
+                        <div class="product-slider__slide__inner o-wrapper">
+                            <div class="product-slider__top">
+                                <div class="product-slider__title_container">
+                                    <h1>{{e.heading}}</h1>
+                                    <p>{{e.subheading}}</p>
+                                </div>
+                                <div class="product-slider__3D_container">
+                                    {% set model = e.modelFile.one() %}
+                                    {% set modelPoster = e.	modelfileposter.one() %}
+                                    <model-viewer id="modelviewer" 
+                                        class="product-slider__3D_model" 
+                                        src="{{model.url}}" 
+                                        alt="A 3D model of an astronaut" 
+                                        camera-controls disable-zoom data-js-focus-visible 
+                                    ></model-viewer>
+                                    {# TODO: poster off #}
+                                    {# poster="{{modelPoster.url}}"
                                     reveal="interaction"
-                                    loading="eager"
-                                ></model-viewer>
+                                        loading="eager" #}
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-slider__bottom">
-                            <div class="product-slider__navigation">
-                                <a class="c-btn c-btn--primary" href="{{e.url}}" alt="{{e.heading}}">
-                                    Read more
-                                    <span></span>
-                                </a>
-                                {# <ul>
-                                    <li>01</li>
-                                    <li>02</li>
-                                    <li>03</li>
-                                    <li>04</li>
-                                </ul> #}
+                            <div class="product-slider__bottom">
+                                <div class="product-slider__navigation">
+                                    <a class="c-btn c-btn--primary" href="{{e.url}}" alt="{{e.heading}}">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
-
-    </section>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
     <section class="about__container" id="about">
         <div class="about__innercontainer">
             <a class="c-btn c-btn--primary" id="about-close-button"  href="#" alt="">
