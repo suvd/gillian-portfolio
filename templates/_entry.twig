@@ -11,20 +11,20 @@
 {% endblock %}
 
 {% block content %}
-    <section data-barba="container" data-barba-namespace="home"  class="o-wrapper product-slider__container">
-        <div class="product-slider__top">
-            <div class="product-slider__title_container">
+    <section data-barba="container" data-barba-namespace="detail">
+        {% include "_partials/_navbar.twig" with {'navItemName': 'back', 'navItemUrl': '/' } %}
+        <div class="detail-header__container o-wrapper">
+            <div class="detail-page__header">
                 <h1>{{entry.heading}}</h1>
                 <p>{{entry.subheading}}</p>
                 <span>{{entry.introtext}}</span>
-                <a class="c-btn c-btn--primary" href="/" alt="">
-                    Home
-                    <span></span>
-                </a>
-            </div>
+            </div>    
         </div>
-    </section>
+        <div class="detail-page__coverimage">
+            {# img #}
+        </div>
 
+    </section>
 {% endblock %}
 
 {% block _inline_js %}

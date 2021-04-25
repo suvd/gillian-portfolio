@@ -1,0 +1,37 @@
+// DETAIL PAGE HEADER
+.detail-header__container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 310px;
+    margin-bottom: 115px;
+
+    .detail-page__header{
+        width: 100%;
+        max-width: 800px;
+
+        h1{
+            width: 100%;
+            font-family:  $font-family-heading;
+            font-size: 90px;
+            font-weight: $font-weight-regular;
+            margin-bottom: 10px;
+        }
+
+        p{
+            font-weight: $font-weight-light;
+            font-family: $font-family-heading;
+            font-size: 1.5rem;
+        }
+
+        span p{
+            font-size: 1rem;
+        }
+    }
+}
+
+// COVERIMG
+.detail-page__coverimage{
+    width: 100vw;
+    height: 40rem;
+    background-color: $black;
+}

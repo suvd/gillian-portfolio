@@ -11,8 +11,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="product__container">
-        <section data-barba="container" data-barba-namespace="home"  class="o-wrapper product-slider__container">
+    <div data-barba="container" data-barba-namespace="home" id="product-container" class="product__container">
+        {% include "_partials/_navbar.twig" with {'navItemName': 'about', 'navItemUrl': '' } %}
+        <section class="o-wrapper product-slider__container">
             <div id="nav" class="product-slider__nav">
                 <div class="button" id="prevtBtn"></div>
                 <div class="button"  id="nextBtn"></div>
@@ -59,9 +60,9 @@
     </div>
     <section class="about__container" id="about">
         <div class="about__innercontainer">
-            <a class="c-btn c-btn--primary" id="about-close-button"  href="#" alt="">
+            {# <a class="c-btn c-btn--primary" id="about-close-button"  href="#" alt="">
                 close<span></span>
-            </a>
+            </a> #}
             <div class="about__content">
                 <h2>about</h2>
                 {{about.aboutText}}
